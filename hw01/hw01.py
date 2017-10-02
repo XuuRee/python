@@ -4,7 +4,8 @@ jmeno: Filip Valchar
 hw: 1
 """
 
-from turtle import Turtle, done, clear
+from turtle import Turtle, clear
+
 
 # first task, alternating multiples
 def alternating_multiples(n):
@@ -93,6 +94,7 @@ def square(side, julie):
         julie.right(90)
     julie.forward(side)
 
+
 def triangle(side, julie):
     for i in range(2):
         julie.left(120)
@@ -100,17 +102,21 @@ def triangle(side, julie):
     julie.left(120)
     julie.forward(side)
 
-# vzhledem k tomu, ze zadani mluvilo o poctu vezi
-# a _mezer_ mezi nimi, neresil jsem situaci kdy
-# by na vstupu bylo zadana jedna nebo nula vezi. 
+
+# function castle is only for inputs with
+# variable 'towers' bigger than two. Spaces
+# (or squares in this case) can't be placed
+# between one or zero towers.
+# This is my interpretation of task :-)
 def castle(towers, length, space):
-    julie = Turtle()
-    base = ((towers - 1) * space) + towers
-    for i in range(base):
-        square(length, julie)
-        if (i % (space + 1) == 0):
-           triangle(length, julie)
-    julie.clear()
+    if (n > 1):
+        julie = Turtle()
+        base = ((towers - 1) * space) + towers
+        for i in range(base):
+            square(length, julie)
+            if (i % (space + 1) == 0):
+                triangle(length, julie)
+        julie.clear()
 
 """
 castle(5, 35, 0)
