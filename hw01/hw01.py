@@ -18,22 +18,6 @@ def alternating_multiples(n):
             alternating += 1
         print()
 
-"""
-alternating_multiples(0)
-alternating_multiples(-2)
-alternating_multiples(1)
-alternating_multiples(2)
-alternating_multiples(3)
-alternating_multiples(4)
-alternating_multiples(5)
-alternating_multiples(6)
-alternating_multiples(7)
-alternating_multiples(8)
-alternating_multiples(9)
-alternating_multiples(10)
-alternating_multiples(11)
-"""
-
 
 # second task, crossing
 def crossing(n, length):
@@ -47,15 +31,6 @@ def crossing(n, length):
                 else:
                     print(" ", end=" ")
             print()
-
-"""
-crossing(0, 0)
-crossing(1, 0)
-crossing(1, 1)
-crossing(1, 2)
-crossing(4, 8)
-crossing(3, 10)
-"""
 
 
 # third task, mocniny
@@ -76,15 +51,6 @@ def mocniny(m, n):
         for j in range(1, m + 1):
             print(j ** i, end=" ")
         print()
-
-"""
-mocniny(0, 3)
-mocniny(1, 3)
-mocniny(4, 0)
-mocniny(2, 3)
-mocniny(5, 3)
-mocniny(8, 3)
-"""
 
 
 # fourth task, castle
@@ -109,7 +75,7 @@ def triangle(side, julie):
 # between one or zero towers.
 # This is my interpretation of task :-)
 def castle(towers, length, space):
-    if (n > 1):
+    if (towers > 1):
         julie = Turtle()
         base = ((towers - 1) * space) + towers
         for i in range(base):
@@ -117,14 +83,6 @@ def castle(towers, length, space):
             if (i % (space + 1) == 0):
                 triangle(length, julie)
         julie.clear()
-
-"""
-castle(5, 35, 0)
-castle(5, 35, 1)
-castle(5, 35, 2)
-castle(5, 35, 3)
-castle(2, 35, 4)
-"""
 
 
 # fifth task, draw python
@@ -166,6 +124,10 @@ def draw_python():
     julie.forward(48)
     julie.clear()
 
-"""
-draw_python()
-"""
+
+alternating_multiples(2)
+alternating_multiples(3)
+crossing(4, 8)
+mocniny(5, 3)
+castle(5, 50, 3)
+draw_python()
